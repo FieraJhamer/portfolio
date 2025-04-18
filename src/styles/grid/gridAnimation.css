@@ -1,0 +1,47 @@
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12 {
+    -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+}
+
+/* Delay de animación para cada div */
+.div1 { animation-delay: 0.2s; }
+.div2 { animation-delay: 0.4s; }
+.div3 { animation-delay: 0.6s; }
+.div4 { animation-delay: 0.8s; }
+.div5 { animation-delay: 1.2s; }
+.div6 { animation-delay: 2s; }
+.div7 { animation-delay: 1s; }
+.div8 { animation-delay: 1.4s; }
+.div9 { animation-delay: 1.6s; }
+.div10 { animation-delay: 2.2s; }
+.div11 { animation-delay: 1.8s; }
+.div12 { animation-delay: 2.4s; }
+  
+/* Animación */
+@-webkit-keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(200px);
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(200px);
+        transform: translateY(200px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

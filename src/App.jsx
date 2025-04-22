@@ -1,5 +1,6 @@
 // Componentes
 import Introduction from './components/Introduction/Introduction.jsx'
+import Clock from './components/Clock/Clock.jsx'
 
 // Estilos generales
 import './App.css'
@@ -22,8 +23,12 @@ function App() {
       <div className="div2">
         2 | Sobre mí <br /> ----------- <br /> Habilidades
       </div>
+
       <div className="div3">3 | Contacto</div>
-      <div className="div4">4 | Reloj</div>
+
+      <div className="div4">
+        <Clock />
+      </div>
       <div className="div5">5 | Current</div>
       <div className="div6">6 | ???</div>
       <div className="div7">7 | ⬇️ Proyectos ⬇️</div>

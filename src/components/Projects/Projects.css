@@ -1,0 +1,48 @@
+.projects {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects img {
+    height: 35%;
+    width: 15%;
+    margin: 0.2rem 0 0 0;
+}
+
+.projects p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+.projects:hover .arrow-left {
+    animation: pointDown 0.8s ease-in-out infinite;
+}
+
+.projects:hover .arrow-right {
+    animation: pointDown 0.8s ease-in-out infinite;
+    animation-delay: 0.2s;
+}
+
+.projects .arrow-left,
+.projects .arrow-right {
+    transition: transform 1s ease-in-out;
+}
+
+.projects:not(:hover) .arrow-left,
+.projects:not(:hover) .arrow-right {
+    transform: translateY(0);
+}
+
+@keyframes pointDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

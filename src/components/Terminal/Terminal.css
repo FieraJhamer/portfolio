@@ -1,0 +1,68 @@
+.terminal {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.terminal p {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.modal {
+    position: absolute; /* Fija el modal en relación a la ventana del navegador */
+    top: 50%; /* Posición vertical al 50% */
+    left: 50%; /* Posición horizontal al 50% */
+    transform: translate(-41.5%, -85.5%); /* Centra el modal ajustando su posición */
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px); /* Aplica un desenfoque al fondo */
+    background-color: rgba(238, 238, 238, 0.411); /* Fondo oscuro semitransparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+.modal-content {
+    font-family: monospace;
+    background: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+    z-index: 1010; /* Asegura que el contenido esté por encima del fondo */
+}
+
+.command-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 4px;
+    background: #333;
+    color: #fff;
+}
+
+button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.close-button {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+

@@ -1,6 +1,11 @@
 // Componentes
 import Introduction from './components/Introduction/Introduction.jsx'
+import AboutMe from './components/AboutMe/AboutMe.jsx'
+//3
 import Clock from './components/Clock/Clock.jsx'
+//5
+import Terminal from './components/Terminal/Terminal.jsx'
+import Projects from './components/Projects/Projects.jsx'
 
 // Estilos generales
 import './App.css'
@@ -21,7 +26,7 @@ function App() {
       </div>
 
       <div className="div2">
-        2 | Sobre mí <br /> ----------- <br /> Habilidades
+        <AboutMe />
       </div>
 
       <div className="div3">3 | Contacto</div>
@@ -29,14 +34,23 @@ function App() {
       <div className="div4">
         <Clock />
       </div>
+
       <div className="div5">5 | Current</div>
-      <div className="div6">6 | ???</div>
-      <div className="div7">7 | ⬇️ Proyectos ⬇️</div>
+      
+      <div className="div7">
+        <Projects />
+      </div>
+      
       <div className="div8">8 | 1er proyecto</div>
       <div className="div9">9 | 2do proyecto</div>
       <div className="div10">10 | 3er proyecto</div>
       <div className="div11">11 | Trabajo</div>
       <div className="div12">12 | Derechos</div>
+
+      {/* Se colocó este div al final para que esté por encima de todo al abrir la terminal */}
+      <div className="div6">
+        <Terminal />
+      </div>
     </main>
   )
 }

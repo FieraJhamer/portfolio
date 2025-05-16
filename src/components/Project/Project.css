@@ -1,0 +1,72 @@
+.project {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #e8e8ee;
+}
+
+.project p {
+    cursor: pointer;
+}
+
+
+/*
+.project {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.project-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-41.5%, -85.5%);
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    background-color: rgba(39, 39, 39, 0.411);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.project-modal-content {
+    font-family: monospace;
+    background: #1e1e1e;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    height: 50vh;
+    width: 35vw;
+    text-align: center;
+    z-index: 1010;
+    overflow-y: scroll;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.close-button {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+*/

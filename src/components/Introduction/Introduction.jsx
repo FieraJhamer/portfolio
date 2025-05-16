@@ -8,17 +8,29 @@ function Introduction() {
                 Feel free to reach out to me if you have any projects in mind, or just to say hello. </p>
 
                 <div className="intro-buttons">
-                    <span className="intro-button">Instagram</span>
-                    <span className="intro-button">LinkedIn</span>
-                    <span className="intro-button">GitHub</span>
-                    <span className="intro-button">Steam</span>
-                    <span className="intro-button">PlayStation</span>
+                    <a href="https://www.instagram.com/fierajhamer" target="_blank" rel="noopener noreferrer" className="intro-button">
+                            <img src="./../../src/assets/instagram-logo.svg" alt="Instagram" />
+                    </a>
+
+                    <a href="https://www.github.com/fierajhamer" target="_blank" rel="noopener noreferrer" className="intro-button">
+                            <img src="./../../src/assets/github-logo.svg" alt="Github" />
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/fierajhamer/" target="_blank" rel="noopener noreferrer" className="intro-button">
+                            <img src="./../../src/assets/linkedin-logo.svg" alt="Linkedin" />
+                    </a>
+
+                    <a href="src/assets/dummy.pdf" download="Alejandro_Gomez_CV" className="intro-button">
+                            <span>Curriculum</span>
+                            <img src="./../../src/assets/curriculum-logo.svg" alt="Curriculum Vitae" />
+                    </a>
+
                 </div>
 
             </div>
 
             <div className="intro-img">
-                <img src="src/assets/logo-white.svg" alt="Mi logo"/>
+                <img src="./../../src/assets/logo-white.svg" alt="Mi logo"/>
             </div>
         </div>
     )

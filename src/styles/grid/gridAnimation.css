@@ -1,4 +1,4 @@
-.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12 {
+.div1, .div2, .div3, .div4, .div5, .div6, .div7, .div8, .div9, .div10, .div11, .div12, #mobile-logo {
     -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
     animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 }
@@ -16,12 +16,13 @@
 .div10 { animation-delay: 2.2s; }
 .div11 { animation-delay: 1.8s; }
 .div12 { animation-delay: 2.4s; }
+#mobile-logo { animation-delay: 0.6s; }
   
 /* Animación */
 @-webkit-keyframes slide-in-bottom {
     0% {
-        -webkit-transform: translateY(200px);
-        transform: translateY(200px);
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
         opacity: 0;
     }
 
@@ -34,8 +35,8 @@
 
 @keyframes slide-in-bottom {
     0% {
-        -webkit-transform: translateY(200px);
-        transform: translateY(200px);
+        -webkit-transform: translateY(50px);
+        transform: translateY(50px);
         opacity: 0;
     }
 

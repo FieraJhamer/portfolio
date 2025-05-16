@@ -26,4 +26,3 @@ document.body.addEventListener("pointermove", (e) => {
 
   requestAnimationFrame(animate);
 });
-

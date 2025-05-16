@@ -7,6 +7,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    overflow-y: hidden;
 }
 
 .about-me p, .about-me ul li {
@@ -19,4 +20,16 @@
 
 .about-me ul {
     width: 70%;
+}
+
+/* Laptop */
+@media (max-width: 1368px) {
+    .about-me p,
+    .about-me ul li {
+        width: 80%;
+        text-align: left;
+        font-size: 0.9rem;
+        font-weight: 300;
+        line-height: 1.5rem;
+    }
 }

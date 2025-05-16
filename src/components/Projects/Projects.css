@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 0.5rem;
 }
 
 .projects img {
@@ -13,11 +14,8 @@
 }
 
 .projects p {
-    font-size: 1.5rem;
-    font-weight: 400;
-}
-.projects:hover .arrow-left {
-    animation: pointDown 0.8s ease-in-out infinite;
+    font-size: 1.3rem;
+    font-weight: 600;
 }
 
 .projects:hover .arrow-right {
@@ -25,16 +23,67 @@
     animation-delay: 0.2s;
 }
 
-.projects .arrow-left,
 .projects .arrow-right {
     transition: transform 1s ease-in-out;
 }
 
-.projects:not(:hover) .arrow-left,
 .projects:not(:hover) .arrow-right {
     transform: translateY(0);
 }
 
+/* Laptop */
+@media (max-width: 1368px) {
+    .projects img {
+        height: 35%;
+        width: 15%;
+        margin: 0.2rem 0 0 0;
+    }
+
+    .projects p {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1025px) {
+    .projects img {
+        height: 25%;
+        width: 20%;
+        margin: 0.2rem 0 0 0;
+    }
+
+    .projects p {
+        font-size: 1.1rem;
+        font-weight: 400;
+    }
+
+    .arrow-left {
+        animation: pointDown 0.8s ease-in-out infinite;
+    }
+    
+    .arrow-right {
+        animation: pointDown 0.8s ease-in-out infinite;
+        animation-delay: 0.2s;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+    .projects img {
+        height: 35%;
+        width: 25%;
+        margin: 0.2rem 0 0 0;
+    }
+
+    .projects p {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+}
+
+/* Animación de las flechas */
 @keyframes pointDown {
     0% {
         transform: translateY(0);

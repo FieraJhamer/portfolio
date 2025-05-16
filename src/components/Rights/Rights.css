@@ -1,0 +1,15 @@
+.rights {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rights p {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.2rem;
+}

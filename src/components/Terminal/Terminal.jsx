@@ -1,24 +1,60 @@
 import "./Terminal.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Terminal() {
     const [visible, setVisible] = useState(false);
     const [command, setCommand] = useState("");
+    const [history, setHistory] = useState([]);
 
     const handleCommandSubmit = (e) => {
         e.preventDefault();
-        console.log("Comando ingresado:", command);
+        if (command.trim()) {
+            setHistory((prevHistory) => {
+                const newHistory = [...prevHistory, command];
+                if (newHistory.length > 10) {
+                    newHistory.shift();
+                }
+                return newHistory;
+            });
+        }
         setCommand("");
     };
 
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === "Escape" && visible) {
+                setVisible(false);
+            }
+        };
+
+        window.addEventListener("keydown", handleKeyDown);
+        return () => {
+            window.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [visible]);
+
     return (
         <div className="terminal" onClick={() => setVisible(true)}>
-            <p>Terminal</p>
+            <p className="terminal-title">Terminal</p>
 
             {visible && (
-                <div className="modal">
-                    <div className="modal-content">
-                        <h2>Terminal</h2>
+                <div className="modal" onClick={() => setVisible(false)}>
+                    <div
+                        className="modal-content"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        <button className="close-button" onClick={() => setVisible(false)}>
+                            Cerrar
+                        </button>
+
+                        <div className="history">
+                            {history.map((cmd, index) => (
+                                <p key={index} className="command">
+                                    {`${cmd}`}
+                                </p>
+                            ))}
+                        </div>
+
                         <form onSubmit={handleCommandSubmit}>
                             <input
                                 type="text"
@@ -27,11 +63,7 @@ function Terminal() {
                                 placeholder="Escribe un comando..."
                                 className="command-input"
                             />
-                            <button type="submit">Ejecutar</button>
                         </form>
-                        <button className="close-button" onClick={() => setVisible(false)}>
-                            Cerrar
-                        </button>
                     </div>
                 </div>
             )}

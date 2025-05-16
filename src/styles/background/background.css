@@ -1,6 +1,6 @@
 body {
-  --posX: 0;
-  --posY: 0;
+  --posX: 10;
+  --posY: 20;
   position: relative;
   overflow-x: hidden;
 }
@@ -21,4 +21,23 @@ body::before {
   background-blend-mode: overlay, overlay, difference, difference, difference, normal;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+/* Fondo optimizado para mobile */
+@media (max-width: 768px) {
+  body {
+    --posX: 5;
+    --posY: 10;
+  }
+
+  body::before {
+    background-image:
+      linear-gradient(115deg, rgb(211 255 215), rgb(0 0 0)),
+      radial-gradient(80% 90% at calc(50% + var(--posX) * 0.5px) calc(0% + var(--posY) * 0.5px), rgb(200 200 200), rgb(22 0 45)),
+      radial-gradient(90% 90% at calc(80% - var(--posX) * 0.5px) calc(0% - var(--posY) * 0.5px), rgb(144, 146, 2), rgb(36 0 0)),
+      radial-gradient(120% 150% at calc(100% + var(--posX) * 0.5px) calc(0% + var(--posY) * 0.5px), rgb(20 175 125), rgb(0 10 255)),
+      radial-gradient(90% 90% at calc(100% - var(--posX) * 0.5px) calc(30% - var(--posY) * 0.5px), rgb(161, 48, 0), rgb(0 200 255)),
+      linear-gradient(60deg, rgb(206, 1, 1), rgb(120 86 255));
+    background-size: cover;
+  }
 }

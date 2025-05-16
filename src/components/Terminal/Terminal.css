@@ -8,10 +8,11 @@
     cursor: pointer;
 }
 
-.terminal p {
-    font-size: 1.5rem;
-    font-weight: 400;
+.terminal-title {
+    font-size: 1.4rem;
+    font-weight: 600;
 }
+
 
 .modal {
     position: absolute; /* Fija el modal en relación a la ventana del navegador */
@@ -21,7 +22,7 @@
     width: 100vw;
     height: 100vh;
     backdrop-filter: blur(5px); /* Aplica un desenfoque al fondo */
-    background-color: rgba(238, 238, 238, 0.411); /* Fondo oscuro semitransparente */
+    background-color: rgba(39, 39, 39, 0.411); /* Fondo oscuro semitransparente */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,24 +35,30 @@
     color: #fff;
     padding: 20px;
     border-radius: 8px;
-    width: 400px;
+    height: 50vh;
+    width: 35vw;
     text-align: center;
-    z-index: 1010; /* Asegura que el contenido esté por encima del fondo */
+    z-index: 1010;
+    overflow-y: scroll;
 }
 
 .command-input {
     width: 80%;
     padding: 10px;
-    margin: 10px 0;
+    margin: 10px 0 50px 0;
     border: none;
     border-radius: 4px;
-    background: #333;
+    background: #1e1e1e;
     color: #fff;
+}
+
+.history {
+    text-align: start;
+    margin: 0 0 0 50px;
 }
 
 button {
     padding: 10px 20px;
-    margin-top: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -65,4 +72,3 @@ button.close-button {
 button:hover {
     opacity: 0.9;
 }
-
